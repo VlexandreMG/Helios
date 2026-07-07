@@ -1,5 +1,6 @@
 import tkinter as tk
 from tkinter import ttk
+from src.ui.components.form import Form
 
 class MainWindow:
     def __init__(self, root):
@@ -9,14 +10,4 @@ class MainWindow:
         self.root.configure(bg="#f5f5f7")
         
         # C'est ici qu'on viendra greffer nos futurs composants (formulaire, tableau)
-        self.creer_widgets()
-
-    def creer_widgets(self):
-        # Un titre temporaire pour tester
-        titre = tk.Label(
-            self.root, 
-            text="HELIOS - Fenêtre Principale", 
-            font=("Helvetica", 14, "bold"),
-            bg="#f5f5f7"
-        )
-        titre.pack(pady=20)
+        self.Formulaire = Form(self.root)
